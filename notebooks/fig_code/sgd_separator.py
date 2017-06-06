@@ -22,7 +22,11 @@ def plot_sgd_separator():
     for (i, j), val in np.ndenumerate(X1):
         x1 = val
         x2 = X2[i, j]
-        p = clf.decision_function([x1, x2])
+        # p = clf.decision_function([x1, x2])
+        # sklearn v0.17+ needs an array-like, sparse matrix
+        # convert the list to array and reshape since it contains
+        # one single sample
+        p = clf.decision_function(np.array([x1, x2]).reshape(1, -1))
         Z[i, j] = p[0]
     levels = [-1.0, 0.0, 1.0]
     linestyles = ['dashed', 'solid', 'dashed']
