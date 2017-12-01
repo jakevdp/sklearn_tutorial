@@ -112,12 +112,12 @@ def plot_tree_interactive(X, y):
         clf = DecisionTreeClassifier(max_depth=depth, random_state=0)
         visualize_tree(clf, X, y)
 
-    from IPython.html.widgets import interact
-    return interact(interactive_tree, depth=[1, 5])
+    from ipywidgets import interact
+    return interact(interactive_tree, depth=(1, 5))
 
 
 def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
-    from IPython.html.widgets import interact
+    from ipywidgets import interact
     from sklearn.metrics.pairwise import euclidean_distances
     from sklearn.datasets.samples_generator import make_blobs
 
@@ -178,7 +178,7 @@ def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
                          ha='right', va='top', size=14)
 
     
-    return interact(_kmeans_step, frame=[0, 50],
+    return interact(_kmeans_step, frame=(0, 50),
                     n_clusters=[min_clusters, max_clusters])
 
 
@@ -221,7 +221,7 @@ def plot_image_components(x, coefficients=None, mean=0, components=None,
 
 def plot_pca_interactive(data, n_components=6):
     from sklearn.decomposition import PCA
-    from IPython.html.widgets import interact
+    from ipywidgets import interact
 
     pca = PCA(n_components=n_components)
     Xproj = pca.fit_transform(data)
