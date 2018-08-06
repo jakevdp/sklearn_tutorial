@@ -39,6 +39,22 @@ $ jupyter notebook --notebook-dir='<tutorial folder>'
 
 Alternatively, you can download and install the (very large) Anaconda software distribution, found at https://store.continuum.io/.
 
+## Installation via Docker
+
+* Please follow Docker [installation instructions](https://docs.docker.com/install/) from the official site.
+* `make build` - build image and create container with name *sklearn-lab*
+* Now notebooks are available by url 127.0.0.1:8888
+
+### Using
+* `make start` - start container
+* `make stop` - stop container
+* 127.0.0.1:8888 - use notebooks
+
+### Using bash and install packages
+* `make start` - start container
+* `make bash` - now you inside linux container
+* `pip install --user package_name` - install new package
+
 ## Downloading the Tutorial Materials
 I would highly recommend using git, not only for this tutorial, but for the
 general betterment of your life.  Once git is installed, you can clone the
