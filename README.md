@@ -33,7 +33,7 @@ Or for current versions of Anaconda (Mar 2018)
 $ conda create -n skl_tut python=3.4.5 ipywidgets=5.2.2 numpy scipy matplotlib scikit-learn ipython-notebook seaborn pillow
 ```
 
-<font color="red"> For current (2023) version of the project:</font>
+<span style="color:red">For current (2023) version of the project:</span> 
 ```
 $ conda create -n skl_tut python=3.10.8 --file requirements.txt
 ```
