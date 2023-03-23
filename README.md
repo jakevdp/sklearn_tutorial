@@ -28,12 +28,20 @@ Once this is installed, the following command will install all required packages
 Original install (2015)
 $ conda install numpy scipy matplotlib scikit-learn ipython-notebook seaborn
 
-Or for current versions of Anaconda (Mar 2018)
+For older version Anaconda (Mar 2018)
  
 $ conda create -n skl_tut python=3.4.5 ipywidgets=5.2.2 numpy scipy matplotlib scikit-learn ipython-notebook seaborn pillow
+```
 
+**For current (2023) version of the project:** 
+```
+$ conda create -n skl_tut python=3.10.8 --file requirements.txt
+```
+
+```
 $ activate skl_tut
-
+```
+```
 $ jupyter notebook --notebook-dir='<tutorial folder>'
 ```
 

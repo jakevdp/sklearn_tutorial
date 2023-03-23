@@ -1,6 +1,6 @@
-numpy
-scipy
-matplotlib
-scikit-learn
-ipython
-seaborn
+numpy==1.23.5
+matplotlib==3.6.2
+scikit-learn==1.2.1
+scipy==1.10.0
+ipython==8.10.0
+seaborn==0.12.2
