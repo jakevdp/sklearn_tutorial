@@ -59,6 +59,6 @@ target/
 # IPython
 .ipynb_checkpoints
 notebooks/.ipynb_checkpoints
-
+/.idea
 # Emacs
 *~
